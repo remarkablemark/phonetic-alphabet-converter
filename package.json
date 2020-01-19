@@ -1,0 +1,7 @@
+{
+  "name": "phonetic-alphabet-converter",
+  "version": "0.0.0",
+  "description": "Converts string to NATO phonetic alphabet.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "license": "MIT"
+}
