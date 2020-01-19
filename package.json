@@ -5,14 +5,18 @@
   "author": "Mark <mark@remarkablemark.org>",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:cjs",
-    "build:cjs": "tsc"
+    "build": "npm run build:cjs && npm run build:umd",
+    "build:cjs": "tsc",
+    "build:umd": "rollup --config"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^2.1.0",
+    "rollup": "^1.29.0",
     "typescript": "^3.7.5"
   },
   "files": [
-    "cjs/"
+    "cjs/",
+    "umd/"
   ],
   "license": "MIT"
 }
