@@ -41,8 +41,7 @@ jspm_packages
 .node_repl_history
 
 # Build files
-build
-dist
+cjs/
 
 # Vim swap files
 *.swp

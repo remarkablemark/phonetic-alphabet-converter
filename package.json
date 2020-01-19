@@ -3,5 +3,12 @@
   "version": "0.0.0",
   "description": "Converts string to NATO phonetic alphabet.",
   "author": "Mark <mark@remarkablemark.org>",
+  "scripts": {
+    "build": "npm run build:cjs",
+    "build:cjs": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  },
   "license": "MIT"
 }
