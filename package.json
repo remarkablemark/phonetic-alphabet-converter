@@ -8,11 +8,16 @@
     "build": "npm run build:cjs && npm run build:umd",
     "build:cjs": "tsc",
     "build:umd": "rollup --config",
-    "clean": "rm -rf cjs umd"
+    "clean": "rm -rf cjs umd",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^2.1.0",
+    "prettier": "^1.19.1",
     "rollup": "^1.29.0",
+    "tslib": "^1.10.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.7.5"
   },
   "files": [
