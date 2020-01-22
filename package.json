@@ -9,10 +9,15 @@
     "build:cjs": "tsc",
     "build:umd": "rollup --config",
     "clean": "rm -rf cjs umd",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint:fix": "npm run lint -- --fix"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@rollup/plugin-typescript": "^2.1.0",
+    "husky": "^4.0.10",
+    "lint-staged": "^10.0.1",
     "prettier": "^1.19.1",
     "rollup": "^1.29.0",
     "tslib": "^1.10.0",
