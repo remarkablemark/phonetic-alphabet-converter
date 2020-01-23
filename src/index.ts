@@ -33,6 +33,9 @@ const nato: PhoneticAlphabet = {
  * Converts a string to an array of (NATO) phonetic alphabet words.
  */
 function converter(text: string, alphabet: PhoneticAlphabet = nato): string[] {
+  if (typeof text !== 'string') {
+    throw new TypeError('First argument must be a string');
+  }
   return text
     .toLowerCase()
     .split('')
