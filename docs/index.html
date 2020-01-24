@@ -1,0 +1,73 @@
+<!-- normalize -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+/>
+
+<!-- MDC Web styles -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+/>
+
+<!-- Custom styles -->
+<style>
+  main {
+    display: block;
+    padding: 0 1rem;
+    margin: 0 auto;
+    max-width: 37.5rem; /* 600px */
+  }
+
+  .mdc-typography--headline2 {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+  }
+</style>
+
+<main>
+  <!-- Render headline -->
+  <h1 class="mdc-typography--headline2">Phonetic Alphabet Converter</h1>
+
+  <!-- Render textfield -->
+  <div
+    class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label"
+  >
+    <input
+      type="text"
+      class="mdc-text-field__input"
+      placeholder="Convert text to NATO phonetic alphabet"
+      aria-label="Convert text to NATO phonetic alphabet"
+      autofocus
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+    />
+  </div>
+  <br />
+
+  <!-- Render body -->
+  <p class="mdc-typography--body1" id="output"></p>
+</main>
+
+<!-- phonetic-alphabet-converter library -->
+<script src="../umd/phonetic-alphabet-converter.js"></script>
+
+<!-- MDC Web JS -->
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+<script>
+  // Instantiate single textfield component rendered in the document
+  mdc.textField.MDCTextField.attachTo(
+    document.querySelector('.mdc-text-field')
+  );
+
+  var output = document.querySelector('#output');
+
+  // Convert input to NATO phonetic alphabet text
+  document.querySelector('input').addEventListener('input', function(event) {
+    var text = event.target.value;
+    output.innerText = PhoneticAlphabetConverter(text).join(' ');
+  });
+</script>
