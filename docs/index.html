@@ -47,8 +47,8 @@
   </div>
   <br />
 
-  <!-- Render body -->
-  <p class="mdc-typography--body1" id="output"></p>
+  <!-- Render words -->
+  <div class="mdc-chip-set"></div>
 </main>
 
 <!-- phonetic-alphabet-converter library -->
@@ -57,23 +57,35 @@
 <!-- MDC Web JS -->
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
+<!-- Custom JS -->
 <script>
+  var MDCChipSet = mdc.chips.MDCChipSet;
+  var chipSet = document.querySelector('.mdc-chip-set');
+
   // Instantiate single textfield component rendered in the document
   mdc.textField.MDCTextField.attachTo(
     document.querySelector('.mdc-text-field')
   );
 
-  var output = document.querySelector('#output');
+  /**
+   * @param {string} text
+   * @return {string}
+   */
+  function generateChipMarkup(text) {
+    var html = '<span class="mdc-chip__text">' + text + '</span>';
+    html += '<div class="mdc-chip__ripple"></div>';
+    html = '<div class="mdc-chip">' + html + '</div>';
+    return html;
+  }
 
   // Convert input to NATO phonetic alphabet text
   document.querySelector('input').addEventListener('input', function(event) {
     var text = event.target.value;
     var words = PhoneticAlphabetConverter(text);
     var chips = words.map(function(word) {
-      if (word) {
-        return '<div class="mdc-chip">' + word + '</div>';
-      }
+      return word ? generateChipMarkup(word) : null;
     });
-    output.innerHTML = '<div class="mdc-chip-set">' + chips.join('') + '</div>';
+    chipSet.innerHTML = chips.join('');
+    new MDCChipSet(chipSet);
   });
 </script>
