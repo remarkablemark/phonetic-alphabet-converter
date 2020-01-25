@@ -68,6 +68,12 @@
   // Convert input to NATO phonetic alphabet text
   document.querySelector('input').addEventListener('input', function(event) {
     var text = event.target.value;
-    output.innerText = PhoneticAlphabetConverter(text).join(' ');
+    var words = PhoneticAlphabetConverter(text);
+    var chips = words.map(function(word) {
+      if (word) {
+        return '<div class="mdc-chip">' + word + '</div>';
+      }
+    });
+    output.innerHTML = '<div class="mdc-chip-set">' + chips.join('') + '</div>';
   });
 </script>
