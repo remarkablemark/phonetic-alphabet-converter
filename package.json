@@ -1,9 +1,9 @@
 {
   "name": "phonetic-alphabet-converter",
   "version": "0.0.0",
-  "description": "Converts string to NATO phonetic alphabet.",
+  "description": "NATO phonetic alphabet converter.",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "index.js",
+  "main": "cjs/index.js",
   "scripts": {
     "build": "npm run build:cjs && npm run build:umd",
     "build:cjs": "tsc",
