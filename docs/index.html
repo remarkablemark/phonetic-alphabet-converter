@@ -6,7 +6,7 @@
     <title>Phonetic Alphabet Converter</title>
     <meta
       name="description"
-      content="Converts string to NATO phonetic alphabet."
+      content="Phonetic Alphabet Converter converts a string of text into a list of NATO phonetic alphabet words."
     />
     <meta
       name="viewport"
@@ -71,6 +71,12 @@
 
     <!-- phonetic-alphabet-converter library -->
     <script src="../umd/phonetic-alphabet-converter.js"></script>
+    <script>
+      PhoneticAlphabetConverter ||
+        document.write(
+          '<script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js">\x3C/script>'
+        );
+    </script>
 
     <!-- MDC Web JS -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
