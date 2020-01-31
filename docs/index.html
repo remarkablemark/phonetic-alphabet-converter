@@ -69,51 +69,57 @@
       <div class="mdc-chip-set"></div>
     </main>
 
-    <!-- phonetic-alphabet-converter library -->
-    <script src="../umd/phonetic-alphabet-converter.js"></script>
-    <script>
-      window.PhoneticAlphabetConverter ||
-        document.write(
-          '<script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js">\x3C/script>'
-        );
-    </script>
-
     <!-- MDC Web JS -->
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
+    <!-- Local library -->
+    <script src="../umd/phonetic-alphabet-converter.js"></script>
+
     <!-- Custom JS -->
     <script>
-      var MDCChipSet = mdc.chips.MDCChipSet;
-      var chipSet = document.querySelector('.mdc-chip-set');
-
-      // Instantiate single textfield component rendered in the document
-      mdc.textField.MDCTextField.attachTo(
-        document.querySelector('.mdc-text-field')
-      );
-
-      /**
-       * @param {string} text
-       * @return {string}
-       */
-      function generateChipMarkup(text) {
-        var html = '<span class="mdc-chip__text">' + text + '</span>';
-        html += '<div class="mdc-chip__ripple"></div>';
-        html = '<div class="mdc-chip">' + html + '</div>';
-        return html;
+      if (window.PhoneticAlphabetConverter) {
+        main();
+      } else {
+        var script = document.createElement('script');
+        script.src =
+          'https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js';
+        script.addEventListener('load', main);
+        document.head.appendChild(script);
       }
 
-      // Convert input to NATO phonetic alphabet text
-      document
-        .querySelector('input')
-        .addEventListener('input', function(event) {
-          var text = event.target.value;
-          var words = PhoneticAlphabetConverter(text);
-          var chips = words.map(function(word) {
-            return word ? generateChipMarkup(word) : null;
+      function main() {
+        var MDCChipSet = mdc.chips.MDCChipSet;
+        var chipSet = document.querySelector('.mdc-chip-set');
+
+        // Instantiate single textfield component rendered in the document
+        mdc.textField.MDCTextField.attachTo(
+          document.querySelector('.mdc-text-field')
+        );
+
+        /**
+         * @param {string} text
+         * @return {string}
+         */
+        function generateChipMarkup(text) {
+          var html = '<span class="mdc-chip__text">' + text + '</span>';
+          html += '<div class="mdc-chip__ripple"></div>';
+          html = '<div class="mdc-chip">' + html + '</div>';
+          return html;
+        }
+
+        // Convert input to NATO phonetic alphabet text
+        document
+          .querySelector('input')
+          .addEventListener('input', function(event) {
+            var text = event.target.value;
+            var words = PhoneticAlphabetConverter(text);
+            var chips = words.map(function(word) {
+              return word ? generateChipMarkup(word) : null;
+            });
+            chipSet.innerHTML = chips.join('');
+            new MDCChipSet(chipSet);
           });
-          chipSet.innerHTML = chips.join('');
-          new MDCChipSet(chipSet);
-        });
+      }
     </script>
   </body>
 </html>
