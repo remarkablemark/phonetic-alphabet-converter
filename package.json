@@ -1,6 +1,6 @@
 {
   "name": "phonetic-alphabet-converter",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "NATO phonetic alphabet converter.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "cjs/index.js",
