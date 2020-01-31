@@ -12,6 +12,7 @@
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "lint:fix": "npm run lint -- --fix",
+    "prepublishOnly": "npm run lint && npm test && npm run clean && npm run build",
     "release": "standard-version --no-verify",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
