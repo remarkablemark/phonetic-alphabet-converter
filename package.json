@@ -15,6 +15,19 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remarkablemark/phonetic-alphabet-converter"
+  },
+  "bugs": {
+    "url": "https://github.com/remarkablemark/phonetic-alphabet-converter"
+  },
+  "keywords": [
+    "nato",
+    "phonetic",
+    "alphabet",
+    "converter"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
