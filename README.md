@@ -19,6 +19,8 @@ import converter from 'phonetic-alphabet-converter';
 converter('abc'); // ['alpha', 'bravo', 'charlie']
 ```
 
+[Demo](https://remarkablemark.org/phonetic-alphabet-converter/) | [JSFiddle](https://jsfiddle.net/remarkablemark/g4r6fu7j/) | [Repl.it](https://repl.it/@remarkablemark/phonetic-alphabet-converter)
+
 ## Installation
 
 [NPM](https://www.npmjs.com/package/phonetic-alphabet-converter):
@@ -36,7 +38,7 @@ $ yarn add phonetic-alphabet-converter
 [CDN](https://unpkg.com/phonetic-alphabet-converter/):
 
 ```html
-<script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.min.js"></script>
+<script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js"></script>
 <script>
   window.PhoneticAlphabetConverter(/* string */);
 </script>
