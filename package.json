@@ -17,6 +17,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "homepage": "https://remarkablemark.org/phonetic-alphabet-converter/",
   "repository": {
     "type": "git",
     "url": "https://github.com/remarkablemark/phonetic-alphabet-converter"
