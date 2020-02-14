@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NATO_PHONETIC_ALPHABET matches snapshot 1`] = `
+Object {
+  "a": "alpha",
+  "b": "bravo",
+  "c": "charlie",
+  "d": "delta",
+  "e": "echo",
+  "f": "foxtrot",
+  "g": "golf",
+  "h": "hotel",
+  "i": "indiana",
+  "j": "juliet",
+  "k": "kilo",
+  "l": "lima",
+  "m": "mike",
+  "n": "november",
+  "o": "oscar",
+  "p": "papa",
+  "q": "quebec",
+  "r": "romeo",
+  "s": "sierra",
+  "t": "tango",
+  "u": "uniform",
+  "v": "victor",
+  "w": "whiskey",
+  "x": "x-ray",
+  "y": "yankee",
+  "z": "zulu",
+}
+`;

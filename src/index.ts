@@ -1,6 +1,6 @@
 type PhoneticAlphabet = Record<string, string>;
 
-const nato: PhoneticAlphabet = {
+export const NATO_PHONETIC_ALPHABET: PhoneticAlphabet = {
   a: 'alpha',
   b: 'bravo',
   c: 'charlie',
@@ -32,7 +32,10 @@ const nato: PhoneticAlphabet = {
 /**
  * Converts a string to an array of (NATO) phonetic alphabet words.
  */
-function converter(text: string, alphabet: PhoneticAlphabet = nato): string[] {
+function converter(
+  text: string,
+  alphabet: PhoneticAlphabet = NATO_PHONETIC_ALPHABET
+): string[] {
   if (typeof text !== 'string') {
     throw new TypeError('First argument must be a string');
   }

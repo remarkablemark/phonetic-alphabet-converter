@@ -1,4 +1,4 @@
-import converter from '.';
+import converter, { NATO_PHONETIC_ALPHABET } from '.';
 
 describe('error', () => {
   it.each([
@@ -24,5 +24,11 @@ describe('converter', () => {
     ['abc', ['alpha', 'bravo', 'charlie']]
   ])('converts "%s" correctly', (text, expected) => {
     expect(converter(text)).toEqual(expected);
+  });
+});
+
+describe('NATO_PHONETIC_ALPHABET', () => {
+  it('matches snapshot', () => {
+    expect(NATO_PHONETIC_ALPHABET).toMatchSnapshot();
   });
 });
