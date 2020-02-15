@@ -62,6 +62,32 @@ Parse string:
 converter('abc'); // ['alpha', 'bravo', 'charlie']
 ```
 
+By default, the converter uses a mapping of the NATO phonetic alphabet.
+
+To override that, you can pass a custom object to the 2nd argument:
+
+```js
+converter('abc', {
+  a: 'Amsterdam',
+  b: 'Baltimore',
+  c: 'Casablanca'
+  // ...
+});
+// ['Amsterdam', 'Baltimore', 'Casablanca']
+```
+
+Or assign values to the default mapping:
+
+```js
+import { NATO_PHONETIC_ALPHABET } from 'phonetic-alphabet-converter';
+
+converter('abc', {
+  ...NATO_PHONETIC_ALPHABET,
+  a: 'alfa'
+});
+// ['alfa', 'bravo', 'charlie']
+```
+
 ## Testing
 
 Run tests with coverage:
