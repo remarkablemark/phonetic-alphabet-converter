@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v0.1.0...v0.2.0) (2020-02-21)
+
+
+### Bug Fixes
+
+* **docs:** ensure fallback cdn script is loaded on gh-pages ([20311a4](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/20311a4))
+
+
+### Features
+
+* **docs:** add github-corners and update meta description ([7ff2d6a](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/7ff2d6a))
+* **src:** export `NATO_PHONETIC_ALPHABET` ([e284565](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/e284565))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2020-01-31)
 
