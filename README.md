@@ -40,7 +40,7 @@ $ yarn add phonetic-alphabet-converter
 ```html
 <script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js"></script>
 <script>
-  window.PhoneticAlphabetConverter(/* string */);
+  window.PhoneticAlphabetConverter.default(/* string */);
 </script>
 ```
 
