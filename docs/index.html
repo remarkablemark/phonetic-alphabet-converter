@@ -13,19 +13,25 @@
     />
     <title>Phonetic Alphabet Converter</title>
 
-    <!-- normalize -->
+    <!--
+      Normalize.css
+    -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
 
-    <!-- MDC Web styles -->
+    <!--
+      MDC Web styles
+    -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.css"
     />
 
-    <!-- Custom styles -->
+    <!--
+      Custom styles
+    -->
     <style>
       main {
         display: block;
@@ -42,12 +48,8 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-
     <main>
-      <!-- Render headline -->
       <h1 class="mdc-typography--headline2">Phonetic Alphabet Converter</h1>
-
-      <!-- Render textfield -->
       <div
         class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label"
       >
@@ -65,15 +67,17 @@
         <div class="mdc-line-ripple"></div>
       </div>
       <br />
-
-      <!-- Render words -->
       <div class="mdc-chip-set"></div>
     </main>
 
-    <!-- MDC Web JS -->
+    <!--
+      MDC Web JS: https://material-components.github.io/material-components-web-catalog/
+    -->
     <script src="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.js"></script>
 
-    <!-- Custom JS -->
+    <!--
+      Custom script
+    -->
     <script>
       if (window.PhoneticAlphabetConverter) {
         main();
