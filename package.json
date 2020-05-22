@@ -6,7 +6,7 @@
   "main": "cjs/index.js",
   "scripts": {
     "build": "npm run build:cjs && npm run build:umd",
-    "build:cjs": "tsc",
+    "build:cjs": "tsc --outDir cjs",
     "build:umd": "rollup --config",
     "clean": "rm -rf cjs umd",
     "coveralls": "cat coverage/lcov.info | coveralls",
