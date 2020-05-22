@@ -32,7 +32,7 @@ export const NATO_PHONETIC_ALPHABET: PhoneticAlphabet = {
 /**
  * Converts a string to an array of (NATO) phonetic alphabet words.
  */
-function converter(
+export default function converter(
   text: string,
   alphabet: PhoneticAlphabet = NATO_PHONETIC_ALPHABET
 ): string[] {
@@ -44,5 +44,3 @@ function converter(
     .split('')
     .map(letter => alphabet[letter]);
 }
-
-export default converter;
