@@ -25,6 +25,14 @@ describe('converter', () => {
   ])('converts "%s" correctly', (text, expected) => {
     expect(converter(text)).toEqual(expected);
   });
+
+  it('uses alphabet provided in 2nd argument', () => {
+    const alphabet = {
+      a: 'alfa'
+    };
+    const letter = 'a';
+    expect(converter(letter, alphabet)).toEqual([alphabet[letter]]);
+  });
 });
 
 describe('NATO_PHONETIC_ALPHABET', () => {
