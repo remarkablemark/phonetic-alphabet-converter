@@ -14,6 +14,7 @@ document.head.appendChild(script);
  */
 function main() {
   var converter = window.PhoneticAlphabetConverter.default;
+  var mdc = window.mdc;
   var MDCChipSet = mdc.chips.MDCChipSet;
   var chipSet = document.querySelector('.mdc-chip-set');
 
