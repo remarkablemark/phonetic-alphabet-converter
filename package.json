@@ -47,7 +47,7 @@
     "lint-staged": "^10.0.1",
     "prettier": "^1.19.1",
     "rollup": "^1.29.0",
-    "standard-version": "^5",
+    "standard-version": "^8",
     "ts-jest": "^25.0.0",
     "typescript": "<3.8.0"
   },
