@@ -26,7 +26,7 @@ export const NATO_PHONETIC_ALPHABET: PhoneticAlphabet = {
   w: 'whiskey',
   x: 'x-ray',
   y: 'yankee',
-  z: 'zulu'
+  z: 'zulu',
 };
 
 /**
@@ -42,5 +42,5 @@ export default function converter(
   return text
     .toLowerCase()
     .split('')
-    .map(letter => alphabet[letter]);
+    .map((letter) => alphabet[letter]);
 }
