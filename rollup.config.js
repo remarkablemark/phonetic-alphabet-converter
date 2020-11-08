@@ -5,7 +5,7 @@ export default {
   output: {
     file: 'umd/phonetic-alphabet-converter.js',
     format: 'umd',
-    name: 'PhoneticAlphabetConverter'
+    name: 'PhoneticAlphabetConverter',
   },
-  plugins: [typescript({ module: 'es2015' })]
+  plugins: [typescript({ module: 'es2015' })],
 };

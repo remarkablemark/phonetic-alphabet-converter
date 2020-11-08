@@ -37,10 +37,10 @@ function main() {
   // Convert input to NATO phonetic alphabet text
   var input = document.querySelector('input');
   input.focus();
-  input.addEventListener('input', function(event) {
+  input.addEventListener('input', function (event) {
     var text = event.target.value;
     var words = converter(text);
-    var chips = words.map(function(word) {
+    var chips = words.map(function (word) {
       return word ? generateChipMarkup(word) : null;
     });
     chipSet.innerHTML = chips.join('');
