@@ -19,18 +19,20 @@ describe('error', () => {
 });
 
 describe('converter', () => {
+  it('returns empty array for blank string', () => {
+    expect(converter('')).toEqual([]);
+  });
+
   it.each([
-    ['mark', ['mike', 'alpha', 'romeo', 'kilo']],
     ['abc', ['alpha', 'bravo', 'charlie']],
+    ['Mark', ['mike', 'alpha', 'romeo', 'kilo']],
   ])('converts "%s" correctly', (text, expected) => {
     expect(converter(text)).toEqual(expected);
   });
 
-  it('uses alphabet provided in 2nd argument', () => {
-    const alphabet = {
-      a: 'alfa',
-    };
+  it('uses alphabet when provided', () => {
     const letter = 'a';
+    const alphabet = { [letter]: 'alfa' };
     expect(converter(letter, alphabet)).toEqual([alphabet[letter]]);
   });
 });
