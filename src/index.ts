@@ -39,8 +39,11 @@ export default function converter(
   if (typeof text !== 'string') {
     throw new TypeError('First argument must be a string');
   }
-  return text
-    .toLowerCase()
-    .split('')
-    .map((letter) => alphabet[letter]);
+
+  if (!text) {
+    return [];
+  }
+
+  const letters = text.toLowerCase().split('');
+  return letters.map((letter) => alphabet[letter]);
 }
