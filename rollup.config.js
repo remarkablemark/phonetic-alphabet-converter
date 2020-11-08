@@ -7,5 +7,5 @@ export default {
     format: 'umd',
     name: 'PhoneticAlphabetConverter'
   },
-  plugins: [typescript()]
+  plugins: [typescript({ module: 'es2015' })]
 };
