@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [0.3.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v0.2.0...v0.3.0) (2020-11-08)
+
+
+### Bug Fixes
+
+* **docs:** add missing text field line ([b4eb72b](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/b4eb72b2547f95288defda4421d4ec8891d8eaf8))
+* **docs:** ensure input is focused even if it's in an iframe ([566682d](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/566682da288da8c24760c2a30b41976031dc0407))
+* **docs:** resolve error by using default export on window namespace ([4ddfb1b](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/4ddfb1bf34eb4b33ade7f3858aa1f2c9ff3ad463))
+* **docs:** specify `material-components-web@5.1.0` for unpkg ([2117014](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/2117014828eacc2bba9a235ec99f6123a2e045d8))
+
+
+### Features
+
+* **docs:** load Roboto font and use headline3 styles for heading ([2559e35](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/2559e35e6193e46c12617ec250e884e8d3ebb80b))
+
+
+### Performance Improvements
+
+* **index:** return early with empty array if string is blank ([6a5334a](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/6a5334ac51e3a1e3a19bac0c7c67ef2433ed0a61))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v0.1.0...v0.2.0) (2020-02-21)
 
