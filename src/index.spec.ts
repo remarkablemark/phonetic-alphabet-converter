@@ -26,6 +26,22 @@ describe('converter', () => {
   it.each([
     ['abc', ['alpha', 'bravo', 'charlie']],
     ['Mark', ['mike', 'alpha', 'romeo', 'kilo']],
+    ['l33t h4x0rz', ['lima', 'tango', 'hotel', 'x-ray', 'romeo', 'zulu']],
+    [
+      'Hello, World!',
+      [
+        'hotel',
+        'echo',
+        'lima',
+        'lima',
+        'oscar',
+        'whiskey',
+        'oscar',
+        'romeo',
+        'lima',
+        'delta',
+      ],
+    ],
   ])('converts "%s" correctly', (text, expected) => {
     expect(converter(text)).toEqual(expected);
   });
@@ -33,7 +49,7 @@ describe('converter', () => {
   it('uses alphabet when provided', () => {
     const letter = 'a';
     const alphabet = { [letter]: 'alfa' };
-    expect(converter(letter, alphabet)).toEqual([alphabet[letter]]);
+    expect(converter(`${letter}bc`, alphabet)).toEqual([alphabet[letter]]);
   });
 });
 
