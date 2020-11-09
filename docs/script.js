@@ -1,11 +1,11 @@
 /**
- * Load.
+ * Load script.
  */
 var script = document.createElement('script');
 script.src =
   location.hostname === ''
-    ? '../umd/phonetic-alphabet-converter.js'
-    : 'https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js';
+    ? '../umd/phonetic-alphabet-converter.min.js'
+    : 'https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.min.js';
 script.addEventListener('load', main);
 document.head.appendChild(script);
 
