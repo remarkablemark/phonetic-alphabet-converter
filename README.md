@@ -21,7 +21,7 @@ converter('abc'); // ['alpha', 'bravo', 'charlie']
 
 [Demo](https://remarkablemark.org/phonetic-alphabet-converter/) | [JSFiddle](https://jsfiddle.net/remarkablemark/g4r6fu7j/) | [Repl.it](https://repl.it/@remarkablemark/phonetic-alphabet-converter)
 
-## Installation
+## Install
 
 [NPM](https://www.npmjs.com/package/phonetic-alphabet-converter):
 
@@ -38,7 +38,7 @@ $ yarn add phonetic-alphabet-converter
 [CDN](https://unpkg.com/phonetic-alphabet-converter/):
 
 ```html
-<script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.js"></script>
+<script src="https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.min.js"></script>
 <script>
   window.PhoneticAlphabetConverter.default(/* string */);
 </script>
@@ -49,41 +49,63 @@ $ yarn add phonetic-alphabet-converter
 Import module:
 
 ```js
-// CommonJS
-const converter = require('phonetic-alphabet-converter').default;
-
 // ES Modules
 import converter from 'phonetic-alphabet-converter';
+
+// CommonJS
+const converter = require('phonetic-alphabet-converter').default;
 ```
 
 Parse string:
 
 ```js
-converter('abc'); // ['alpha', 'bravo', 'charlie']
+converter('Hello, world!');
+// ['hotel', 'echo', 'lima', 'lima', 'oscar', 'whiskey', 'oscar', 'romeo', 'lima', 'delta']
 ```
 
-By default, the converter uses a mapping of the NATO phonetic alphabet.
+> The string is **lowercased** and characters not found on the alphabet map are **ignored**.
 
-To override that, you can pass a custom object to the 2nd argument:
+If the string is blank, an empty array is returned:
+
+```js
+converter('');
+// []
+```
+
+If the first argument is not a string, then an error will be thrown:
+
+```js
+converter();
+// TypeError: First argument must be a string
+```
+
+### Second Argument
+
+By default, the converter uses a mapping of the NATO phonetic alphabet:
+
+```js
+import { NATO_PHONETIC_ALPHABET } from 'phonetic-alphabet-converter';
+```
+
+To override that, you can pass a custom object to the second argument:
 
 ```js
 converter('abc', {
   a: 'Amsterdam',
   b: 'Baltimore',
-  c: 'Casablanca'
-  // ...
+  c: 'Casablanca',
 });
 // ['Amsterdam', 'Baltimore', 'Casablanca']
 ```
 
-Or assign values to the default mapping:
+Or you can assign values to the default alphabet map:
 
 ```js
 import { NATO_PHONETIC_ALPHABET } from 'phonetic-alphabet-converter';
 
 converter('abc', {
   ...NATO_PHONETIC_ALPHABET,
-  a: 'alfa'
+  a: 'alfa',
 });
 // ['alfa', 'bravo', 'charlie']
 ```

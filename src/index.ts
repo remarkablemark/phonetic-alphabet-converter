@@ -44,6 +44,17 @@ export default function converter(
     return [];
   }
 
+  const output = [];
   const letters = text.toLowerCase().split('');
-  return letters.map((letter) => alphabet[letter]);
+
+  for (let index = 0, len = letters.length; index < len; index++) {
+    const letter = letters[index];
+    const word = alphabet[letter];
+
+    if (word) {
+      output.push(word);
+    }
+  }
+
+  return output;
 }
