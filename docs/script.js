@@ -41,9 +41,7 @@ script.addEventListener('load', function () {
   input.addEventListener('input', function (event) {
     var text = event.target.value;
     var words = converter(text);
-    var chips = words.map(function (word) {
-      return word ? generateChipMarkup(word) : null;
-    });
+    var chips = words.map(generateChipMarkup);
     chipSet.innerHTML = chips.join('');
     new MDCChipSet(chipSet);
   });
