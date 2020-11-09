@@ -6,13 +6,12 @@ script.src =
   location.hostname === ''
     ? '../umd/phonetic-alphabet-converter.min.js'
     : 'https://unpkg.com/phonetic-alphabet-converter@latest/umd/phonetic-alphabet-converter.min.js';
-script.addEventListener('load', main);
 document.head.appendChild(script);
 
 /**
- * Main.
+ * Initialize app.
  */
-function main() {
+script.addEventListener('load', function () {
   var converter = window.PhoneticAlphabetConverter.default;
   var mdc = window.mdc;
   var MDCChipSet = mdc.chips.MDCChipSet;
@@ -24,17 +23,19 @@ function main() {
   );
 
   /**
-   * @param {string} text
+   * Generates chip markup.
+   *
+   * @param {string} word
    * @return {string}
    */
-  function generateChipMarkup(text) {
-    var html = '<span class="mdc-chip__text">' + text + '</span>';
+  function generateChipMarkup(word) {
+    var html = '<span class="mdc-chip__text">' + word + '</span>';
     html += '<div class="mdc-chip__ripple"></div>';
     html = '<div class="mdc-chip">' + html + '</div>';
     return html;
   }
 
-  // Convert input to NATO phonetic alphabet text
+  // Convert string to NATO phonetic alphabet words
   var input = document.querySelector('input');
   input.focus();
   input.addEventListener('input', function (event) {
@@ -46,4 +47,4 @@ function main() {
     chipSet.innerHTML = chips.join('');
     new MDCChipSet(chipSet);
   });
-}
+});
