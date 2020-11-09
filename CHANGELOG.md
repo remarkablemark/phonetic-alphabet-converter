@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.0.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v0.3.0...v1.0.0) (2020-11-09)
+
+
+### Performance Improvements
+
+* **docs:** use minified UMD bundle for demo site ([4fa265b](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/4fa265bf55b800a561804fce8d8fd6b0e154c40a))
+
+
+* feat(index)!: skip characters that are not on the alphabet map ([3579293](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/3579293932102aefeeb312e6b8a82ca80013d309))
+
+
+### BREAKING CHANGES
+
+* filter out `undefined` from converter array output
+when a character does not exist on the alphabet map.
+
+
+
 # [0.3.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v0.2.0...v0.3.0) (2020-11-08)
 
 
