@@ -12,14 +12,14 @@ Converts string to [NATO phonetic alphabet](https://en.wikipedia.org/wiki/NATO_p
 PhoneticAlphabetConverter(string[, alphabet])
 ```
 
-#### Example:
+#### Example
 
 ```js
 import converter from 'phonetic-alphabet-converter';
 converter('abc'); // ['alpha', 'bravo', 'charlie']
 ```
 
-[Demo](https://remarkablemark.org/phonetic-alphabet-converter/) | [JSFiddle](https://jsfiddle.net/remarkablemark/g4r6fu7j/) | [Repl.it](https://repl.it/@remarkablemark/phonetic-alphabet-converter)
+[Site](https://b.remarkabl.org/phonetic-alphabet-converter) | [JSFiddle](https://jsfiddle.net/remarkablemark/g4r6fu7j/) | [Repl.it](https://repl.it/@remarkablemark/phonetic-alphabet-converter)
 
 ## Install
 
