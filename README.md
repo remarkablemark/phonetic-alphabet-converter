@@ -3,7 +3,7 @@
 [![NPM](https://nodei.co/npm/phonetic-alphabet-converter.png)](https://nodei.co/npm/phonetic-alphabet-converter/)
 
 [![NPM version](https://img.shields.io/npm/v/phonetic-alphabet-converter.svg)](https://www.npmjs.com/package/phonetic-alphabet-converter)
-[![Build Status](https://travis-ci.org/remarkablemark/phonetic-alphabet-converter.svg?branch=master)](https://travis-ci.org/remarkablemark/phonetic-alphabet-converter)
+[![Build Status](https://github.com/remarkablemark/phonetic-alphabet-converter/workflows/build/badge.svg?branch=master)](https://github.com/remarkablemark/phonetic-alphabet-converter/actions?query=workflow%3Abuild)
 [![Coverage Status](https://coveralls.io/repos/github/remarkablemark/phonetic-alphabet-converter/badge.svg?branch=master)](https://coveralls.io/github/remarkablemark/phonetic-alphabet-converter?branch=master)
 
 Converts string to [NATO phonetic alphabet](https://en.wikipedia.org/wiki/NATO_phonetic_alphabet) words:
@@ -26,13 +26,13 @@ converter('abc'); // ['alpha', 'bravo', 'charlie']
 [NPM](https://www.npmjs.com/package/phonetic-alphabet-converter):
 
 ```sh
-$ npm install phonetic-alphabet-converter --save
+npm install phonetic-alphabet-converter --save
 ```
 
 [Yarn](https://yarnpkg.com/package/phonetic-alphabet-converter):
 
 ```sh
-$ yarn add phonetic-alphabet-converter
+yarn add phonetic-alphabet-converter
 ```
 
 [CDN](https://unpkg.com/phonetic-alphabet-converter/):
@@ -115,25 +115,25 @@ converter('abc', {
 Run tests with coverage:
 
 ```sh
-$ npm test
+npm test
 ```
 
 Run tests in watch mode:
 
 ```sh
-$ npm run test:watch
+npm run test:watch
 ```
 
 Lint files:
 
 ```sh
-$ npm run lint
+npm run lint
 ```
 
 Fix lint errors:
 
 ```sh
-$ npm run lint:fix
+npm run lint:fix
 ```
 
 ## Release
@@ -141,8 +141,8 @@ $ npm run lint:fix
 Only collaborators with credentials can release and publish:
 
 ```sh
-$ npm run release
-$ git push --follow-tags && npm publish
+npm run release
+git push --follow-tags && npm publish
 ```
 
 ## License
