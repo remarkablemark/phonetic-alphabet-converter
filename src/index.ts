@@ -9,7 +9,7 @@ export const NATO_PHONETIC_ALPHABET: PhoneticAlphabet = {
   f: 'foxtrot',
   g: 'golf',
   h: 'hotel',
-  i: 'indiana',
+  i: 'india',
   j: 'juliet',
   k: 'kilo',
   l: 'lima',
