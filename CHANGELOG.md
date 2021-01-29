@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.1.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v1.0.0...v1.1.0) (2021-01-29)
+
+
+### Features
+
+* **index:** replace indiana with india ([eaf22e4](https://github.com/remarkablemark/phonetic-alphabet-converter/commit/eaf22e46a590fbcdbc65da0cc9f681fd21e2091f))
 
 # [1.0.0](https://github.com/remarkablemark/phonetic-alphabet-converter/compare/v0.3.0...v1.0.0) (2020-11-09)
 
